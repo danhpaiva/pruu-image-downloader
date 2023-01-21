@@ -94,6 +94,7 @@
             this.btn_start_download.TabIndex = 4;
             this.btn_start_download.Text = "START DOWNLOAD";
             this.btn_start_download.UseVisualStyleBackColor = false;
+            this.btn_start_download.Click += new System.EventHandler(this.btn_start_download_Click);
             // 
             // lbl_language
             // 
@@ -115,6 +116,7 @@
             this.cb_product.Name = "cb_product";
             this.cb_product.Size = new System.Drawing.Size(239, 22);
             this.cb_product.TabIndex = 7;
+            this.cb_product.SelectedIndexChanged += new System.EventHandler(this.cb_product_SelectedIndexChanged);
             // 
             // cb_version
             // 
@@ -125,6 +127,7 @@
             this.cb_version.Name = "cb_version";
             this.cb_version.Size = new System.Drawing.Size(239, 22);
             this.cb_version.TabIndex = 8;
+            this.cb_version.SelectedIndexChanged += new System.EventHandler(this.cb_version_SelectedIndexChanged);
             // 
             // cb_language
             // 
@@ -135,6 +138,7 @@
             this.cb_language.Name = "cb_language";
             this.cb_language.Size = new System.Drawing.Size(239, 22);
             this.cb_language.TabIndex = 9;
+            this.cb_language.SelectedIndexChanged += new System.EventHandler(this.cb_language_SelectedIndexChanged);
             // 
             // cb_arch
             // 
@@ -145,6 +149,7 @@
             this.cb_arch.Name = "cb_arch";
             this.cb_arch.Size = new System.Drawing.Size(239, 22);
             this.cb_arch.TabIndex = 10;
+            this.cb_arch.SelectedIndexChanged += new System.EventHandler(this.cb_arch_SelectedIndexChanged);
             // 
             // F_Principal
             // 
