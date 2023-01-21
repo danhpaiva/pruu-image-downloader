@@ -39,6 +39,7 @@
             this.cb_version = new System.Windows.Forms.ComboBox();
             this.cb_language = new System.Windows.Forms.ComboBox();
             this.cb_arch = new System.Windows.Forms.ComboBox();
+            this.lbl_contact = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_principal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,12 +152,25 @@
             this.cb_arch.TabIndex = 10;
             this.cb_arch.SelectedIndexChanged += new System.EventHandler(this.cb_arch_SelectedIndexChanged);
             // 
+            // lbl_contact
+            // 
+            this.lbl_contact.AutoSize = true;
+            this.lbl_contact.LinkColor = System.Drawing.Color.LightSteelBlue;
+            this.lbl_contact.Location = new System.Drawing.Point(548, 9);
+            this.lbl_contact.Name = "lbl_contact";
+            this.lbl_contact.Size = new System.Drawing.Size(85, 14);
+            this.lbl_contact.TabIndex = 11;
+            this.lbl_contact.TabStop = true;
+            this.lbl_contact.Text = "@danhpaiva";
+            this.lbl_contact.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_contact_LinkClicked);
+            // 
             // F_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(676, 272);
+            this.Controls.Add(this.lbl_contact);
             this.Controls.Add(this.cb_arch);
             this.Controls.Add(this.cb_language);
             this.Controls.Add(this.cb_version);
@@ -192,5 +206,6 @@
         private ComboBox cb_version;
         private ComboBox cb_language;
         private ComboBox cb_arch;
+        private LinkLabel lbl_contact;
     }
 }
