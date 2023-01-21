@@ -25,7 +25,7 @@ namespace PruuImageDownloader
                 cb_version.Items.Add("Office 2021 LTSC");
             }
             else
-                Messages.MessageSelectAnIten();
+                Messages.MessageSelectAnIten("...");
         }
 
         private void cb_version_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,14 +36,14 @@ namespace PruuImageDownloader
                 cb_language.Enabled = true;
                 cb_language.Items.Add("PT-BR");
             }
-            else if (cb_product.Text == "Office 2021 LTSC")
+            else if (cb_version.Text == "Office 2021 LTSC")
             {
                 cb_language.Items.Clear();
                 cb_language.Enabled = true;
                 cb_language.Items.Add("PT-BR");
             }
             else
-                Messages.MessageSelectAnIten();
+                Messages.MessageSelectAnIten("...");
         }
 
         private void cb_language_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace PruuImageDownloader
                 cb_arch.Items.Add("X64");
             }
             else
-                Messages.MessageSelectAnIten();
+                Messages.MessageSelectAnIten("...");
         }
 
         private void cb_arch_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,12 +76,13 @@ namespace PruuImageDownloader
                 btn_start_download.Enabled = true;
             }
             else
-                Messages.MessageSelectAnIten();
+                Messages.MessageSelectAnIten("...");
         }
 
         private void btn_start_download_Click(object sender, EventArgs e)
         {
             ValidateExecuteDownload.Windows1122h2PtBr(cb_product, cb_version, cb_language, cb_arch);
+            ValidateExecuteDownload.Office2021ProPlusPtBr(cb_product, cb_version, cb_language, cb_arch);
         }
 
         private void lbl_contact_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

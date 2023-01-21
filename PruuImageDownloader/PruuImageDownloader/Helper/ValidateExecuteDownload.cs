@@ -20,5 +20,21 @@ namespace PruuImageDownloader.Helper
                 }
             }
         }
+        public static void Office2021ProPlusPtBr(ComboBox cb_product, ComboBox cb_version, ComboBox cb_language, ComboBox cb_arch)
+        {
+            if (cb_product.Text == "Office")
+            {
+                if (cb_version.Text == "Office 2021 LTSC")
+                {
+                    if (cb_language.Text == "PT-BR")
+                    {
+                        if (cb_arch.Text == "X64")
+                            Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/pt-br/ProPlus2021Retail.img");
+                        else
+                            Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/pt-br/ProPlus2021Retail.img");
+                    }
+                }
+            }
+        }
     }
 }
