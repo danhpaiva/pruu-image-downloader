@@ -1,8 +1,8 @@
 namespace PruuImageDownloader
 {
-    public partial class Form1 : Form
+    public partial class F_Principal : Form
     {
-        public Form1()
+        public F_Principal()
         {
             InitializeComponent();
         }
