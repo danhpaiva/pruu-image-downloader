@@ -81,8 +81,10 @@ namespace PruuImageDownloader
 
         private void btn_start_download_Click(object sender, EventArgs e)
         {
-            ValidateExecuteDownload.Windows1122h2PtBr(cb_product, cb_version, cb_language, cb_arch);
-            ValidateExecuteDownload.Office2021ProPlusPtBr(cb_product, cb_version, cb_language, cb_arch);
+            if(cb_product.Text == "Windows")
+                ValidateExecuteDownload.Windows_11_22h2_PtBr(cb_product, cb_version, cb_language, cb_arch);
+            else
+                ValidateExecuteDownload.Office_2021_Pro_Plus_PtBr(cb_product, cb_version, cb_language, cb_arch);
         }
 
         private void lbl_contact_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

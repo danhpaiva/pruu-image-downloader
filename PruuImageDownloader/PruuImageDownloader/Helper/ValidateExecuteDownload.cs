@@ -4,7 +4,7 @@ namespace PruuImageDownloader.Helper
 {
     public static class ValidateExecuteDownload
     {
-        public static void Windows1122h2PtBr(ComboBox cb_product, ComboBox cb_version, ComboBox cb_language, ComboBox cb_arch)
+        public static void Windows_11_22h2_PtBr(ComboBox cb_product, ComboBox cb_version, ComboBox cb_language, ComboBox cb_arch)
         {
             if (cb_product.Text == "Windows")
             {
@@ -20,7 +20,7 @@ namespace PruuImageDownloader.Helper
                 }
             }
         }
-        public static void Office2021ProPlusPtBr(ComboBox cb_product, ComboBox cb_version, ComboBox cb_language, ComboBox cb_arch)
+        public static void Office_2021_Pro_Plus_PtBr(ComboBox cb_product, ComboBox cb_version, ComboBox cb_language, ComboBox cb_arch)
         {
             if (cb_product.Text == "Office")
             {
