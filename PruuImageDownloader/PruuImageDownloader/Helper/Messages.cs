@@ -2,9 +2,9 @@
 {
     public static class Messages
     {
-        public static void MessageSelectAnIten()
+        public static void MessageSelectAnIten(string message)
         {
-            MessageBox.Show("Select an item.");
+            MessageBox.Show($"Select an correct item: {message}");
         }
     }
 }
