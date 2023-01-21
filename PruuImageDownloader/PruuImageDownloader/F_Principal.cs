@@ -1,3 +1,4 @@
+using PruuImageDownloader.Helper;
 using System.Diagnostics;
 
 namespace PruuImageDownloader
@@ -24,7 +25,7 @@ namespace PruuImageDownloader
                 cb_version.Items.Add("Office 2021 LTSC");
             }
             else
-                MessageBox.Show("Select an item.");
+                Messages.MessageSelectAnIten();
         }
 
         private void cb_version_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace PruuImageDownloader
                 cb_language.Items.Add("PT-BR");
             }
             else
-                MessageBox.Show("Select an item.");
+                Messages.MessageSelectAnIten();
         }
 
         private void cb_language_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace PruuImageDownloader
                 cb_arch.Items.Add("X64");
             }
             else
-                MessageBox.Show("Select an item.");
+                Messages.MessageSelectAnIten();
         }
 
         private void cb_arch_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,26 +76,17 @@ namespace PruuImageDownloader
                 btn_start_download.Enabled = true;
             }
             else
-                MessageBox.Show("Select an item.");
+                Messages.MessageSelectAnIten();
         }
 
         private void btn_start_download_Click(object sender, EventArgs e)
         {
-            if (cb_product.Text == "Windows")
-            {
-                if (cb_version.Text == "Windows 11 22H2")
-                {
-                    if (cb_language.Text == "PT-BR")
-                    {
-                        if (cb_arch.Text == "X64")
-                        {
-                            Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "http://dl.delivery.mp.microsoft.com/filestreamingservice/files/3eb153b9-dec7-4b38-bc69-189fef6e55ef/22621.525.220925-0207.ni_release_svc_refresh_CLIENTCONSUMER_RET_x64FRE_pt-br.esd");
-                        }
-                        else
-                            MessageBox.Show("Sorry, image not available");
-                    }
-                }
-            }
+            ValidateExecuteDownload.Windows1122h2PtBr(cb_product, cb_version, cb_language, cb_arch);
+        }
+
+        private void lbl_contact_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "https://github.com/danhpaiva");
         }
     }
 }
